@@ -1,0 +1,71 @@
+@import "ember-modal-dialog/ember-modal-structure.css";
+@import "ember-modal-dialog/ember-modal-appearance.css";
+
+.ntag{
+    /* padding:10px; */
+    text-align: center;
+    position: relative;
+    top:20px;
+    margin:20px;
+    line-height:50px;
+}
+
+.pbar{
+    text-decoration: none;
+    color:black;
+}
+.ntag .nbar{
+    padding:10px;
+    font-size:22px;
+    font-weight: bold;
+}
+
+.display{
+    line-height: 50px;
+    border:1px solid black;
+    padding:10px;
+    margin:60px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor:pointer;
+    background-color: rgb(232, 239, 250);
+    font-size:18px;
+    border:2px solid black
+}
+
+.dislaypro{
+    line-height:30px;
+    width:500px;
+    
+}
+
+.search{
+    position:fixed;
+    top:0px;
+    right:0;
+    
+}
+
+.useradd{
+    position:absolute;
+    top:180px;
+    padding:10px;
+    left:50px;
+    cursor:pointer
+
+}
+
+.activity{
+    position:fixed;
+    left:20px;
+    top:20px;
+    
+}
+
+
+.act{
+    position: flex;
+    margin:10px;
+    color:rgb(6, 6, 240);
+    font-size:15px;
+
+}

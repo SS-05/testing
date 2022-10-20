@@ -1,0 +1,102 @@
+{{page-title "User"}}
+<div class="userA text-center">
+    <h4 class="text-center display-5">List of users</h4>
+    <LinkTo class="nbar" @route="home.user.userupdate">
+        <h5>USER ADD</h5>
+    </LinkTo>
+</div>
+
+
+<div class="search">
+    <Input @type="text" @value={{this.search}} placeholder="Search" />
+</div>
+
+{{#each this.updateres as |array|}}
+<div class="px-4 display" {{action 'event' array.id}}>
+   
+
+        <div class="text-center">
+            <strong>USER:{{array.id}}</strong>
+        </div>
+        <div>
+            Id:{{array.id}}
+        </div>
+
+        <div>
+            Name:{{array.name}}
+        </div>
+
+        <div>
+            Username:{{array.username}}
+        </div>
+
+        <div>
+            Email:{{array.email}}
+        </div>
+
+    </div>
+    {{/each}}
+
+    {{#if this.isShowingModal}}
+    {{#let this.updatedArray as |arr|}}
+    <ModalDialog @onClose={{action "event"}} @targetAttachment="center" @translucentOverlay={{true}}>
+        <div class="dislaypro">
+            <div>
+                Id:{{arr.id}}
+            </div>
+            <div>
+                Name:{{arr.name}}
+            </div>
+
+            <div>
+                Username:{{arr.username}}
+            </div>
+
+            <div>
+                Email:{{arr.email}}
+            </div>
+            Address
+            <div>
+                Street:{{arr.address.street}}
+            </div>
+            <div>
+                Suite:{{arr.address.suite}}
+            </div>
+            <div>
+                City:{{arr.address.city}}
+            </div>
+            <div>
+                Zipcode{{arr.address.zipcode}}
+            </div>
+            Geo
+            <div>
+                Lat:{{arr.address.geo.lat}}
+            </div>
+
+            <div>
+                Lng:{{arr.address.geo.lng}}
+            </div>
+
+            <div>
+                Phone:{{arr.phone}}
+            </div>
+
+            <div>
+                Website:{{arr.website}}
+            </div>
+            Company
+            <div>
+                Name:{{arr.company.name}}
+            </div>
+            <div>
+                CatchPhrase:{{arr.company.catchPhrase}}
+            </div>
+            <div>
+                bs:{{arr.company.bs}}
+            </div>
+
+        </div>
+    </ModalDialog>
+    {{/let}}
+    {{/if}}
+    {{outlet}}

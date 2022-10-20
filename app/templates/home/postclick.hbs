@@ -1,0 +1,67 @@
+{{page-title "Postclick"}}
+
+<div class="display">
+
+    <div>
+        UserID{{this.parent.userId}}
+    </div>
+    <div>
+        Id:{{this.parent.id}}
+    </div>
+    <div>
+        Title:{{this.parent.title}}
+    </div>
+    <div>
+        Body:{{this.parent.body}}
+    </div>
+</div>
+<h4 class="text-center">The comments for the Post ID is as follows</h4>
+<h5 class="text-center">ADD COMMENTS</h5>
+{{!-- <div class="d-flex gap-4">
+    <Input @type="text" placeholder="Enter user id" @value={{this.id}} />
+    <Input @type="text" placeholder="Enter a name" @value={{this.name}} />
+    <Input @type="Email" placeholder="Enter a email" @value={{this.email}} />
+    <Input @type="text" placeholder="Add comment" @value={{this.comment}} />
+
+
+    <button class="btn btn-primary" type="button" {{action "useradd" }}>POST</button>
+</div> --}}
+
+{{#let this.model.comments as |obj|}}
+{{#each obj as |array|}}
+<div class="display">
+    <div>
+        Id : {{array.email}}
+    </div>
+    <div>
+        Name : {{array.name}}
+    </div>
+    <div>
+        Email : {{array.email}}
+    </div>
+    <div>
+        Body : {{array.body}}
+    </div>
+</div>
+{{/each}}
+{{/let}}
+
+{{!-- <form>
+    <div class="display ">
+     <div>
+        Id : {{this.id}}
+    </div>
+    <div>
+        Name : {{this.name}}
+    </div>
+    <div>
+        Email : {{this.email}}
+    </div>
+    <div>
+        Body : {{this.comment}}
+    </div>
+</div>
+
+</form> --}}
+
+{{outlet}}

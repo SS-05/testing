@@ -1,0 +1,15 @@
+{{page-title "Userupdate"}}
+
+
+<div class="useradd d-flex">
+   <form name="userform">
+    <Input name="uname" @type="text" placeholder="Enter a name" />
+    <Input name="uun" @type="text" placeholder="Enter a username" />
+    <Input name="email" @type="Email" placeholder="Enter a email" />
+    <button class="btn btn-primary" type="button" {{action "useradd" }}>Add</button>
+   </form>
+</div>
+
+
+
+{{outlet}}

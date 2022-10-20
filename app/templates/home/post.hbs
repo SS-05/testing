@@ -1,0 +1,30 @@
+{{page-title "Post"}}
+<h4 class="text-center display-5">List of posts</h4>
+<div class="search">
+    <Input @type="text" @value={{this.res}}/>
+</div>
+
+{{#each this.updateres as |data|}}
+<LinkTo class="pbar" @route="home.postclick" @model={{data.id}}>
+    <div class="px-4 display">
+        {{!-- <div>
+            userID:
+            {{data.userId}}
+        </div>
+
+        <div>
+            id:{{data.id}}
+        </div> --}}
+
+        <div>
+           <strong>TITLE</strong> : {{data.title}}
+        </div>
+
+        {{!-- <div>
+            body:{{data.body}}
+        </div> --}}
+
+    </div>
+</LinkTo>
+{{/each}}
+{{outlet}}

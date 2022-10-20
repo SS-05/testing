@@ -1,0 +1,22 @@
+{{page-title "Home"}}
+
+<div class="ntag">
+    <LinkTo class="nbar" @route="login">HOME</LinkTo>
+    <LinkTo class="nbar" @route="home.user">USER</LinkTo>
+    <LinkTo class="nbar" @route="home.post">POST</LinkTo>
+    <LinkTo class="nbar" @route="login" {{action 'logout' }}>LOGOUT</LinkTo>
+    {{!-- <LinkTo class="nbar" @route="home.user.userupdate">USER ADD</LinkTo> --}}
+
+    {{!-- <button type="button" {{action 'logout' }}>
+        LOGOUT
+    </button> --}}
+
+</div>
+<div class="bar">
+<button type="button" class="activity" {{action 'activity' }}>
+    ACTIVITY BAR
+</button>
+
+<div class='act' id="activity"></div>
+</div>
+{{outlet}}
